@@ -1,4 +1,5 @@
 # Adam Khoshnaw
+Progress update: Implementing graph basics and client interface.
 
 Core Goals:
 * Represent graphs in C++ (adjacency lists + optional matrices)

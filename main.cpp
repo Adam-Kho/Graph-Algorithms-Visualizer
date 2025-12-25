@@ -1,4 +1,11 @@
 // Adam Khoshnaw
+#include "graph.cpp"
+
+#include <iostream>
+#include <map>
+#include <vector>
+#include <algorithm>
+#include <string>
 
 int main() {
 
@@ -20,7 +27,7 @@ int main() {
 
         std::cout << "Enter choice: ";
         std::cin >> choice;
-        std::cout >> "\n";
+        std::cout << "\n";
 
         switch(choice) {
             case (1):

@@ -46,3 +46,13 @@ Checklist:
 - Weighteds and unweighted graphs
 - Edge cases (disconnected nodes, cycles)
 
+Personal Notes:
+- Implemented basic user interface and learned switch statement:
+switch (expression) {
+  case 1:
+    ...
+    break;
+  case 2:
+    ...
+    break;
+}

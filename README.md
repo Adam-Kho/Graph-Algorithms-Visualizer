@@ -1,6 +1,6 @@
 # Adam Khoshnaw
 Progress update: Implemented graph functions and plan for BFS. Possible idea, 
-hard code some nodes for testing instead of adding nodes repeatedly during development.
+hard code some nodes for testing instead of adding nodes repeatedly during development. 
 
 Overview:
 C++ graph algorithms visualizer focusing on implementing and understanding fundamental

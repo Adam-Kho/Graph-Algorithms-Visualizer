@@ -1,5 +1,4 @@
 // Adam Khoshnaw
-
 #include "graph.h"
 
 #include <iostream>
@@ -13,6 +12,7 @@ bool Graph::addVertex(int vertex) {
         theGraph[vertex] = { };
         return true;
     }
+    return false;
 }
 
 bool Graph::addEdge(int v1, int v2) {
@@ -28,8 +28,8 @@ bool Graph::addEdge(int v1, int v2) {
     }
 }
 
-void Graph::displayGraph() {
-    if (theGraph.empty()) { // 
+void Graph::displayGraph() const {
+    //if (theGraph.empty()) { // 
         // for (declaration : range)
         for (const auto& element : theGraph) {
             std::cout << element.first << " : ";
@@ -38,10 +38,10 @@ void Graph::displayGraph() {
             }
             std::cout << "\n";
         }
-    }
-    else {
-        std::cout << "Graph is empty." << "\n";
-    }
+    //}
+    //else {
+    //    std::cout << "Graph is empty." << "\n";
+    //}
 }
 
 

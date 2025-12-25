@@ -1,5 +1,5 @@
 // Adam Khoshnaw
-#include "graph.cpp"
+#include "graph.h"
 
 #include <iostream>
 #include <map>
@@ -16,36 +16,51 @@ int main() {
     int vertexTwo = 0;
 
     std::cout << "Graph Algorithms Visualizer!\n" << std::endl;
+    std::cout << "0) Exit program\n";
+    std::cout << "1) Add vertex\n";
+    std::cout << "2) Add edge\n";
+    std::cout << "3) Display Graph\n";
 
     // menu interface
     do {
         // CHANGE TO FUNCTION FOR CLEANER MAIN
-        std::cout << "0) Exit program\n";
+        /*std::cout << "0) Exit program\n";
         std::cout << "1) Add vertex\n";
         std::cout << "2) Add edge\n";
         std::cout << "3) Display Graph\n";
+        */
 
-        std::cout << "Enter choice: ";
+        std::cout << "\nEnter choice: ";
         std::cin >> choice;
-        std::cout << "\n";
+        std::cout << std::endl;
 
         switch(choice) {
             case (1):
                 std::cout << "Integer value: ";
                 std::cin >> vertexNum;
                 std::cout << "\n";
-                objGraph.addVertex(vertexNum);
+                if (objGraph.addVertex(vertexNum)) {
+                    std::cout << "Vertex added\n";
+                }
+                else { // add validation
+                    std::cout << "Invalid integer.\n";
+                }
 
                 break;
             case (2):
                 std::cout << "Vertex 1: ";
                 std::cin >> vertexOne;
-                std::cout << "\n";
+                //std::cout << "\n";
                 std::cout << "Vertex 2: ";
                 std::cin >> vertexTwo;
                 std::cout << "\n";
 
-                objGraph.addEdge(vertexOne, vertexTwo);
+                if (objGraph.addEdge(vertexOne, vertexTwo)) {
+                    std::cout << "Edge added\n";
+                }
+                else {
+                    std::cout << "Invalid, could not add edge.\n";
+                }
 
                 break;
             case (3):

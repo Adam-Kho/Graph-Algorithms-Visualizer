@@ -28,6 +28,14 @@ bool Graph::addEdge(int v1, int v2) {
     }
 }
 
+bool Graph::checkVertex(int vertex) const { // can prolong
+    return theGraph.find(vertex) != theGraph.end();
+}
+
+const std::vector<int>& Graph::getNeighbors(int vertex) const {
+    return theGraph.at(vertex); // .at assumes vertex exists
+}
+
 void Graph::displayGraph() const {
     //if (theGraph.empty()) { // 
         // for (declaration : range)

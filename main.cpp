@@ -1,5 +1,6 @@
 // Adam Khoshnaw
 #include "graph.h"
+#include "algorithms.h"
 
 #include <iostream>
 #include <map>
@@ -14,12 +15,14 @@ int main() {
     int vertexNum = 0;
     int vertexOne = 0;
     int vertexTwo = 0;
+    int startVertex = 0;
 
     std::cout << "Graph Algorithms Visualizer!\n" << std::endl;
     std::cout << "0) Exit program\n";
     std::cout << "1) Add vertex\n";
     std::cout << "2) Add edge\n";
     std::cout << "3) Display Graph\n";
+    std::cout << "4) BFS Traversal\n";
 
     // menu interface
     do {
@@ -65,6 +68,22 @@ int main() {
                 break;
             case (3):
                 objGraph.displayGraph();
+
+                break;
+            case (4):
+                std::cout << "Start vertex: ";
+                std::cin >> startVertex;
+
+                if (!objGraph.checkVertex(startVertex)) {
+                    std::cout << "Vertex does not exist.\n";
+                    break;
+                }
+                std::vector<int> bfsOrder = traversalBFS(objGraph, startVertex);
+
+                std::cout << "BFS Traversal Order: ";
+                for (int v : bfsOrder)
+                    std::cout << v << " ";
+                std::cout << "\n";
 
                 break;
         }

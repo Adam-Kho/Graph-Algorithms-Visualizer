@@ -14,10 +14,11 @@ class Graph {
         Graph() { }
 
         bool addVertex(int vertex);
-
         bool addEdge(int v1, int v2);
-
         void displayGraph() const;
+
+        bool checkVertex(int vertex) const;
+        const std::vector<int>& getNeighbors(int vertex) const;
 
     private:
         std::map<int, std::vector<int>> theGraph;

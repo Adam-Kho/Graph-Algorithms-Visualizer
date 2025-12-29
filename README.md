@@ -12,6 +12,9 @@ Current Status:
 * Graph data structure implemented using an adjacency list
 * Menu driven client interface, done
 * Users can add vertices, add edges, and display graph in terminal
+* BFS implemented and tested, working as expected
+* Added an option to generate a graph for efficient testing
+* Working on DFS currently
 
 Core Goals:
 * Represent graphs in C++ (adjacency lists + optional matrices)

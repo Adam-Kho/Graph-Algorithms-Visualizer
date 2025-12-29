@@ -23,6 +23,7 @@ int main() {
     std::cout << "2) Add edge\n";
     std::cout << "3) Display Graph\n";
     std::cout << "4) BFS Traversal\n";
+    std::cout << "99) Automate Graph (for testing)\n";
 
     // menu interface
     do {
@@ -39,6 +40,7 @@ int main() {
 
         switch(choice) {
             case (1):
+            {
                 std::cout << "Integer value: ";
                 std::cin >> vertexNum;
                 std::cout << "\n";
@@ -50,7 +52,9 @@ int main() {
                 }
 
                 break;
+            }
             case (2):
+            {
                 std::cout << "Vertex 1: ";
                 std::cin >> vertexOne;
                 //std::cout << "\n";
@@ -66,7 +70,9 @@ int main() {
                 }
 
                 break;
+            }
             case (3):
+            {
                 objGraph.displayGraph();
 
                 break;
@@ -86,6 +92,40 @@ int main() {
                 std::cout << "\n";
 
                 break;
+            }
+            case (99): // could create function instead for cleaner main
+            {
+                objGraph.addVertex(1);
+                objGraph.addVertex(2);
+                objGraph.addVertex(3);
+                objGraph.addVertex(4);
+                objGraph.addVertex(5);
+                objGraph.addVertex(6);
+                objGraph.addVertex(7);
+                objGraph.addVertex(8);
+                objGraph.addVertex(9);
+                objGraph.addVertex(10);
+                objGraph.addVertex(11);
+                objGraph.addVertex(12);
+
+                objGraph.addEdge(1, 2);
+                objGraph.addEdge(1, 3);
+                objGraph.addEdge(2, 4);
+                objGraph.addEdge(3, 5);
+                objGraph.addEdge(4, 5);
+                objGraph.addEdge(5, 7);
+                objGraph.addEdge(6, 7);
+                objGraph.addEdge(7, 8);
+                objGraph.addEdge(5, 8);
+                objGraph.addEdge(8, 10);
+                objGraph.addEdge(10, 9);
+                objGraph.addEdge(9, 12);
+                objGraph.addEdge(12, 11);
+
+                std::cout << "Graph created.\n";
+
+                break;
+            }
         }
     } while (choice != 0);
 

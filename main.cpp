@@ -23,6 +23,7 @@ int main() {
     std::cout << "2) Add edge\n";
     std::cout << "3) Display Graph\n";
     std::cout << "4) BFS Traversal\n";
+    std::cout << "5) DFS Traversal\n";
     std::cout << "99) Automate Graph (for testing)\n";
 
     // menu interface
@@ -76,7 +77,9 @@ int main() {
                 objGraph.displayGraph();
 
                 break;
+            }
             case (4):
+            {
                 std::cout << "Start vertex: ";
                 std::cin >> startVertex;
 
@@ -88,6 +91,24 @@ int main() {
 
                 std::cout << "BFS Traversal Order: ";
                 for (int v : bfsOrder)
+                    std::cout << v << " ";
+                std::cout << "\n";
+
+                break;
+            }
+            case (5):
+            {
+                std::cout << "Start vertex: ";
+                std::cin >> startVertex;
+
+                if (!objGraph.checkVertex(startVertex)) {
+                    std::cout << "Vertex does not exist.\n";
+                    break;
+                }
+                std::vector<int> dfsOrder = traversalDFS(objGraph, startVertex);
+
+                std::cout << "DFS Traversal Order: ";
+                for (int v : dfsOrder)
                     std::cout << v << " ";
                 std::cout << "\n";
 

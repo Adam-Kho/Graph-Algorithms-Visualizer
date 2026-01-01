@@ -7,6 +7,5 @@
 
 std::vector<int> traversalBFS(const Graph &graph, const int start);
 
-void traversalDFS(const Graph &graph, const int start);
-
+std::vector<int> traversalDFS(const Graph &graph, const int start);
 #endif

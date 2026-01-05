@@ -4,10 +4,10 @@
 #include "algorithms.h"
 
 #include <iostream>
-#include <map>
+//#include <map>
 #include <vector>
-#include <algorithm>
-#include <string>
+//#include <algorithm>
+//#include <string>
 
 int main() {
 
@@ -115,7 +115,8 @@ int main() {
 
                 break;
             }
-            case (99): // could create function instead for cleaner main
+            // predefined graph for efficient testing of BFS/DFS
+            case (99):
             {
                 objGraph.addVertex(1);
                 objGraph.addVertex(2);

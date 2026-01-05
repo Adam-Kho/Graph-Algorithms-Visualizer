@@ -4,10 +4,10 @@
 #include "algorithms.h"
 
 #include <iostream>
-#include <map>
+//#include <map>
 #include <vector>
-#include <algorithm>
-#include <string>
+//#include <algorithm>
+//#include <string>
 #include <queue>
 #include <stack>
 #include <set>

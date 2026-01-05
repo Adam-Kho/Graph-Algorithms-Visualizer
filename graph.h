@@ -2,11 +2,8 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-#include <iostream>
 #include <map>
 #include <vector>
-#include <algorithm>
-#include <string>
 
 class Graph {
 

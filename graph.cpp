@@ -8,11 +8,14 @@
 #include <string>
 
 bool Graph::addVertex(int vertex) {
-    if (vertex) {
-        theGraph[vertex] = { };
-        return true;
+    if (vertex == 0) { // cant be zero
+        return false;
     }
-    return false;
+    else if (theGraph.find(vertex) != theGraph.end()) { // exists ?
+        return false;
+    }
+    theGraph[vertex] = { };
+    return true;
 }
 
 bool Graph::addEdge(int v1, int v2) {
@@ -46,10 +49,6 @@ void Graph::displayGraph() const {
             }
             std::cout << "\n";
         }
-    //}
-    //else {
-    //    std::cout << "Graph is empty." << "\n";
-    //}
 }
 
 

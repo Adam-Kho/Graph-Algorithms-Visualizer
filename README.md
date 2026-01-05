@@ -40,10 +40,7 @@ Graph Representation:
 * Graph logic isolated from user input handling
 
 Implemented Algorithms:
-* Breadth-First Search
-Queue based traversal
-Tracks visited vertices to avoid revisits
-Time complexity: O(V + E)
+* Breadth-First Search - Queue based traversal - Tracks visited vertices to avoid revisits -Time complexity: O(V + E)
 * Depth-First Search
 Recursive implementation using a helper function
 Tracks visited vertices

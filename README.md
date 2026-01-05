@@ -4,73 +4,76 @@ hard code some nodes for testing instead of adding nodes repeatedly during devel
 
 Overview:
 C++ graph algorithms visualizer focusing on implementing and understanding fundamental
-graph data structures and algorithms. The program currently supports building an undirected 
-graph through a terminal client interface and will be extended to include graph 
-traversal algorithms and visualizations.
+graph data structures and algorithms. The program allowe users to construct an undirected
+graph through a trerminal based interface and perform Breadth-First Search (BFS) and 
+Depth-First Search (DFS) traversals, displaying the traversal order.
+This project emphasizes clean design, modularity, and algorithmic clarity rather than
+graphical visualization.
 
 Current Status:
 * Graph data structure implemented using an adjacency list
-* Menu driven client interface, done
-* Users can add vertices, add edges, and display graph in terminal
+* Menu driven terminal interface
+* Users can add vertices, add edges, display graph, BFS + DFS traversal in terminal
 * BFS implemented and tested, working as expected
-* Added an option to generate a graph for efficient testing
-* Working on DFS currently
+* BFS and DFS fully implemented and tested
+* Includes an automated graph generation option for efficient testing
 
 Core Goals:
-* Represent graphs in C++ (adjacency lists + optional matrices)
-* Implement algorithms (BFS, DFS, Dijkstra)
-* Provide visualization of algorithm (terminal for now)
-* Maintain modular, readable, and extensible code
-* Git version control and proper commits
-
-MINIMAL CORE IDEA VERSION
-Goal: Represent a graph, BFS and DFS, print traversal order
-Mini Checklist:
-1. Create Graph class with adjacency list
-2. Add vertices and edges
-3. Implement BFS
-4. Implement DFS
-5. Test with 5 node graph
-6. Commit stable version
+* Represent graphs in C++ using adjacency lists
+* Implement algorithms (BFS, DFS)
+* Dijkstra
+* Seperate grpah structure from algorithm logic
+* Maintain readable, modular and extensible code
+* Git for structured version control
 
 Project Structure:
-* main.cpp -> client interface
-* graph.h -> graph class
-* graph.cpp -> graph class implementation
-* algorithms.h -> graph algorithms (not yet)
-* algorithms.cpp -> algorithms implementation
+* main.cpp -> handle user interaction and menu driven control flow
+* graph.h/graph.cpp -> defines and implements the Graph using an adjacency list representation
+* algorithms.h/algorithms.cpp -> Contains graph traversal algorithms (BFS and DFS), implemented
+independently from the graph class
 
 Graph Representation:
 * Adjacency list using std::map<int, std::vector<int>>
-* Support for undirected graphs
-* Functions to add vertices and edges
-* Display adjacency list
+* Undirected graphs
+* Vertices represented as integers
+* Safe access to neighbors through public graph interface
+* Graph logic isolated from user input handling
 
-Algorithms (not yet):
+Implemented Algorithms:
 * Breadth-First Search
+Queue based traversal
+Tracks visited vertices to avoid revisits
+Time complexity: O(V + E)
 * Depth-First Search
-* Dijkstra's shortest path algorithm
-* Cycle detection (maybe)
-* Connected components (maybe)
+Recursive implementation using a helper function
+Tracks visited vertices
+Time complexity: O(V + E)
+* Future implementations
+Dijkstra's shortest path algorithm
+Cycle detection
+Connected components
 
 Input/Output:
-* Graph construction through terminal menu
-* Display adjacency list
-* Print traversal order (BFS/DFS)
-* Print distances and path for Dijkstra (not yet)
+* Interactive terminal menu for graph construction
+* Option to automatically generate a test graph
+* Displays
+Adjacency list representation
+BFS traversal order
+DFS traversal order
 
 Visualization:
 * Terminal visualization (visited nodes, traversal order)
-* Possible future enhancements for step-by-step execution output
+* Traversal order printed sequentially
+* Designed for clarity and algorithm understanding
 
 Testing Plan:
 * Small graphs (~5 nodes)
-* Medium graphs (~15 nodes)
-* Weighted and unweighted graphs
-* Edge cases: disconnected graphs, cycles
+* Medium graphs using automated generation
+* Disconnected graph scenarios
+* Validation of traversal correctness
 
-Personal Notes:
-* Vertices are integers to keep data structure simple
-* The graph backend avoids direct user interaction
-* Printing and user interaction happens in client interface
-* Learned and applied switch statements for menu control
+Notes:
+* Vertices are restricted to non-zero integers
+* The graph backend is independent of user interaction
+* Algorithms operate only through the graph's public interface
+* Focused on correctness, clarity, and foundational understand

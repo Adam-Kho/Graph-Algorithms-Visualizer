@@ -1,7 +1,4 @@
 # Adam Khoshnaw
-Progress update: Implemented graph functions and plan for BFS. Possible idea, 
-hard code some nodes for testing instead of adding nodes repeatedly during development. 
-
 Overview:
 C++ graph algorithms visualizer focusing on implementing and understanding fundamental
 graph data structures and algorithms. The program allowe users to construct an undirected
@@ -40,23 +37,14 @@ Graph Representation:
 * Graph logic isolated from user input handling
 
 Implemented Algorithms:
-* Breadth-First Search - Queue based traversal - Tracks visited vertices to avoid revisits -Time complexity: O(V + E)
-* Depth-First Search
-Recursive implementation using a helper function
-Tracks visited vertices
-Time complexity: O(V + E)
-* Future implementations
-Dijkstra's shortest path algorithm
-Cycle detection
-Connected components
+* Breadth-First Search - Queue based traversal - Tracks visited vertices to avoid revisits - Time complexity: O(V + E)
+* Depth-First Search - Recursive implementation using a helper function - Tracks visited vertices - Time complexity: O(V + E)
+* Future implementations - Dijkstra's shortest path algorithm - Cycle detection - Connected components
 
 Input/Output:
 * Interactive terminal menu for graph construction
 * Option to automatically generate a test graph
-* Displays
-Adjacency list representation
-BFS traversal order
-DFS traversal order
+* Displays: Adjacency list representation, BFS traversal order, DFS traversal order
 
 Visualization:
 * Terminal visualization (visited nodes, traversal order)
